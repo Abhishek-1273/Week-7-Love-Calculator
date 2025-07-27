@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="bg">
+        </div>
+    <div class="head fadeUp">
+        <h1 class="title">Discover Your Love Compatibility</h1>
+        <img src="icons/wonder.svg" alt="">
+        <h2 class="sub-head">Ever wondered how compatible you and your special someone really are? Enter your names and find out your love percentage instantly! Let the heart decide </h2>
+    </div>
+    <p class="sep"></p>
+    <div class="imp autoShow ">
+        <img src="icons/imp.svg" alt="">
+        <h3 class="imp-head">You can only try once. Your first result is the most honest. Trying again is cheating!</h3>
+    </div>
+    </header>
+    <main class="autoShow">
+        <div class="name">
+            <input id="name1" type="text" placeholder="Enter your name">
+            <img src="icons/heartimage.svg" alt="heartImage">
+            <input id="name2" type="text" placeholder="Enter your crush name">
+        </div>
+        <div class="btn">
+            <button class="btn-chk" onclick="calculatorLove()">Check Love %</button>
+            <p id="result"></p>
+        </div>
+    </main>
+    <p class="sep"></p>
+    <footer>
+        
+        <div class="bottom">
+            <p class="fact autoBlur">
+                This tool is just for fun! But who knows — maybe the stars really are aligned.
+                <img src="icons/star.svg" alt="star"></p>
+        </div>
+        <div class="foot">
+            <p>&copy; 2025 | Made with ❤️ for fun | All Rights Reserved </p>
+        </div>
+        </footer>
+        <div class="audio">
+            <audio src="audio/wannabeyours.mp3" id="loveAudio" autoplay loop muted></audio>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>
