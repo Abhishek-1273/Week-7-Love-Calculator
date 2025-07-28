@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -21,14 +22,19 @@ body {
 .title {
     color: #c9184a;
     text-decoration: underline;
+    font-size: 40px;
 
 }
 
 .sub-head {
     color: #e02459;
-    display: flex;
 }
+.sub-head-cap{
+    text-transform: uppercase;
+    color: #e02459;
+    font-size: 2em;
 
+}
 .imp {
     display: flex;
     justify-content: center;
@@ -62,8 +68,9 @@ body {
     transition: all 0.3s ease;
 
 }
-.name input:hover{
-    transform:scale(0.9);
+
+.name input:hover {
+    transform: scale(0.9);
 
 }
 
@@ -89,7 +96,8 @@ input:focus {
 
 .btn-chk {
     padding: 10px 20px;
-    border: none;    background-color: #ffe5ec;
+    border: none;
+    background-color: #ffe5ec;
     border-radius: 5px;
     border: 1.5px solid #ea6f92;
     font-weight: bolder;
@@ -102,7 +110,7 @@ input:focus {
 .btn-chk:hover {
     background-color: #c9184a;
     color: #ffe5ec;
-    transform:scale(0.8);
+    transform: scale(0.9);
 }
 
 #result {
@@ -126,10 +134,61 @@ img {
 
 .fact {
     display: flex;
+    width: 80%;
+    margin: 20px auto;
     justify-content: center;
     align-items: center;
     color: #e02459;
     padding: 10px;
+    
+}
+
+.love-facts-box {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#love-facts {
+    height: auto;
+    width: auto;
+    background-color: white;
+    border: 2px dashed #c9184a;
+    box-shadow: 2px 2px #c9184a;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    margin: 10px;
+    align-items: center;
+}
+
+.love-heading {
+    color: #ff0048;
+    font-size: 1.5rem;
+}
+
+#factDisplay {
+    font-size: 1rem;
+    color: #dd2d4a;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .foot {
@@ -185,7 +244,7 @@ img {
 
     .foot {
         height: 10px;
-        font-size: 10px;
+        font-size: 15px;
         color: #c9184a;
     }
 

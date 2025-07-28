@@ -55,3 +55,75 @@ function calculatorLove() {
     document.querySelector(".btn-chk").disabled = true;
 }
 
+
+let facts = [
+  "❤ Hugging your partner for 20 seconds releases oxytocin.",
+  "💓 Your heartbeat syncs with your partner when cuddling.",
+  "🧠 Love and addiction activate the same brain area.",
+  "🦋 Butterflies in your stomach? That’s adrenaline.",
+  "👀 Eye contact for 2 minutes can build emotional connection.",
+  "🎯 Saying 'I love you' activates the brain’s reward system.",
+  "🤝 Holding hands reduces stress and physical pain.",
+  "📞 Long-distance couples often build stronger emotional bonds.",
+  "😵 Falling in love lowers serotonin — creating obsession.",
+  "🌡 Love literally makes you feel warmer.",
+  "👃 You’re subconsciously attracted to someone’s scent.",
+  "📅 Couples who laugh together stay longer.",
+  "🧬 Genetic similarity affects romantic attraction.",
+  "🎶 Listening to music together strengthens emotional bonds.",
+  "🧸 Love boosts your immune system.",
+  "😳 People blink slower when looking at someone they love.",
+  "📲 Texting 'Good morning' increases relationship satisfaction.",
+  "🧠 Memories of love activate pain relief centers in the brain.",
+  "💬 People in love talk more about their partner than themselves.",
+  "🫂 Long hugs release stress-relieving chemicals.",
+  "💋 Kissing lowers cortisol levels — the stress hormone.",
+  "🍫 Chocolate and love both trigger dopamine.",
+  "🥺 Couples mimic each other's body language unconsciously.",
+  "🧭 Most people are attracted to those with similar values.",
+  "👩‍❤‍👨 62% of people believe in soulmates.",
+  "🎁 Giving gifts releases more dopamine than receiving.",
+  "🧠 Love can temporarily reduce IQ — love brain fog is real!",
+  "📚 Romantic people often love poetry and music.",
+  "💞 Physical touch improves emotional bonding.",
+  "📉 Breakups cause real withdrawal-like symptoms.",
+  "😴 Sleeping close improves REM sleep quality.",
+  "📷 Looking at partner photos relieves pain.",
+  "💐 Smelling flowers increases romantic thoughts.",
+  "💌 Saying 'I miss you' increases oxytocin production.",
+  "🚶‍♂ Couples who walk in sync report more satisfaction.",
+  "👂 Listening is a top-ranked love language.",
+  "🧠 Love strengthens memory when tied to strong emotions.",
+  "🎨 Making art together builds intimacy.",
+  "📦 Nostalgia increases feelings of love.",
+  "🐦 Love letters increase dopamine — even if not real!",
+  "📖 Storytelling boosts partner empathy.",
+  "🖼 Couples who display photos of each other feel closer.",
+  "🌃 Star-gazing is linked with emotional closeness.",
+  "🧃 Sharing food increases oxytocin levels.",
+  "🍿 Watching movies together builds deeper emotional memories.",
+  "💭 Thinking about love activates parts of the brain related to rewards.",
+  "🎈 Celebrating small wins boosts connection.",
+  "🏃‍♀ Working out together increases physical attraction.",
+  "💬 Deep late-night conversations strengthen bonds.",
+  "🛏 Cuddling before sleep improves trust levels."
+];
+
+let current = 0;
+
+function showFact() {
+  const factDisplay = document.getElementById("factDisplay");
+
+  // Reset animation
+  factDisplay.style.animation = "none";
+  void factDisplay.offsetWidth; // force reflow
+  factDisplay.textContent = facts[current];
+  factDisplay.style.animation = "fadeIn 1s ease forwards";
+
+  current = (current + 1) % facts.length;
+}
+
+window.onload = () => {
+  showFact();
+  setInterval(showFact, 5000); // new fact every 5 seconds
+};
